@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">NPR</string>
+    <string name="setting_Intro">Update user preference settings</string>
+    <string name="settings">Settings</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="load_data">Load Data</string>
+    <string name="vehicle_type">Vehicle Type</string>
+    <string name="region">Region</string>
+    <string name="vehicle_no">Vehicle No</string>
+    <string name="company_name">Software AG</string>
+    <string name="app_description">Number plate recognizer</string>
+    <string name="scan_vehicle">Scan/Upload Vehicle No Plate</string>
+    <string name="token">NPR Token</string>
+    <string name="npr_url">NPR Url</string>
+    <string name="google_sheets_url">Google Sheets URL</string>
+    <string name="google_sheet_id">Google Sheet ID</string>
+    <string name="google_sheet_name">Google Sheet Name</string>
+    <string name="google_api_key">Google API Key</string>
+    <string name="google_api_token">Google API Token</string>
+    <string name="resize">Resize %. Default will be 50%</string>
+    <string-array name="size">
+        <item>100</item>
+        <item>90</item>
+        <item>80</item>
+        <item>70</item>
+        <item>60</item>
+        <item>50</item>
+        <item>40</item>
+        <item>30</item>
+        <item>20</item>
+        <item>10</item>
+    </string-array>
+</resources>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/text_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/settings"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+        <ImageButton
+            android:id="@+id/backT_btn_type"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@drawable/back_arrow_icon"></ImageButton>
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/load_data"
+        android:textAllCaps="false"
+        android:textColor="#ffff"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/loadData">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins"
+                android:text="@string/npr_url"
+                android:textColor="@color/black"
+                android:padding="10dp"/>
+
+            <EditText
+                android:id="@+id/default_url"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:hint="@string/npr_url"
+                android:textColor="@color/black"
+                android:theme="@style/appEditText"
+                app:layout_constraintTop_toBottomOf="@id/textView7" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins"
+                android:padding="10dp"
+                android:text="@string/token"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/default_url"/>
+
+            <EditText
+                android:id="@+id/token_Code"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/token"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:inputType="textPersonName"
+                android:theme="@style/appEditText"
+                app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/resize"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/token_Code" />
+
+            <FrameLayout
+                android:id="@+id/editText9"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="250dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/edittext_background"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/textView5"
+                tools:layout_editor_absoluteX="10dp">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:autofillHints="sd" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/google_url_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins"
+                android:padding="10dp"
+                android:text="@string/google_sheets_url"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/editText9" />
+
+            <EditText
+                android:id="@+id/google_url"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:hint="@string/google_sheets_url"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:inputType="textPersonName"
+                android:theme="@style/appEditText"
+                app:layout_constraintTop_toBottomOf="@id/google_url_tv" />
+
+            <TextView
+                android:id="@+id/google_api_key_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins"
+                android:padding="10dp"
+                android:text="@string/google_api_key"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/google_url" />
+
+            <EditText
+                android:id="@+id/google_api_key"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:hint="@string/google_api_key"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:inputType="textPersonName"
+                android:theme="@style/appEditText"
+                app:layout_constraintTop_toBottomOf="@id/google_api_key_tv" />
+
+            <TextView
+                android:id="@+id/google_api_token_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins"
+                android:padding="10dp"
+                android:text="@string/google_api_token"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/google_api_key" />
+
+            <EditText
+                android:id="@+id/google_api_token"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:hint="@string/google_api_token"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:inputType="textPersonName"
+                android:theme="@style/appEditText"
+                app:layout_constraintTop_toBottomOf="@id/google_api_token_tv" />
+
+            <TextView
+                android:id="@+id/google_sheet_id_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins"
+                android:padding="10dp"
+                android:text="@string/google_sheet_id"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/google_api_token" />
+
+            <EditText
+                android:id="@+id/google_sheet_id"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:hint="@string/google_sheet_id"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:inputType="textPersonName"
+                android:theme="@style/appEditText"
+                app:layout_constraintTop_toBottomOf="@id/google_sheet_id_tv" />
+
+            <TextView
+                android:id="@+id/google_sheet_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins"
+                android:padding="10dp"
+                android:text="@string/google_sheet_name"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/google_sheet_id" />
+
+            <EditText
+                android:id="@+id/google_sheet_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:hint="@string/google_sheet_name"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:inputType="textPersonName"
+                android:theme="@style/appEditText"
+                app:layout_constraintTop_toBottomOf="@id/google_sheet_name_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/applyChanged"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/save_changes"
+                android:textAllCaps="false"
+                android:textColor="#ffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toBottomOf="@+id/google_sheet_name"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>
